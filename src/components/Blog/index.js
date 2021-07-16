@@ -22,7 +22,7 @@ import ReactPaginate from 'react-paginate';
             .bind(this);
     }
 	
-       receivedData() {
+       getPosts() {
         axios
             .get(`https://jsonplaceholder.typicode.com/posts`)
             .then(res => {
@@ -62,7 +62,7 @@ import ReactPaginate from 'react-paginate';
             currentPage: selectedPage,
             offset: offset
         }, () => {
-            this.receivedData()
+            this.getPosts()
         });
 
     };
@@ -78,7 +78,7 @@ import ReactPaginate from 'react-paginate';
             });
 			
 			
-        this.receivedData();
+        this.getPosts();
 		
     }
 	
